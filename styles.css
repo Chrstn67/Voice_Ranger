@@ -1,0 +1,198 @@
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.5;
+  overflow-x: hidden;
+  margin: 0.5em;
+}
+
+header {
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+button {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #fff;
+  transform: translateX(100%);
+  overflow: scroll;
+  transition: transform 0.3s ease;
+}
+
+aside.visible {
+  transform: translateX(0);
+}
+
+h2 {
+  font-size: 1.8rem;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.close-aside {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px;
+}
+
+.close-aside:hover {
+  background-color: #666;
+}
+
+.definition {
+  padding: 20px;
+}
+
+.definition div {
+  margin-bottom: 20px;
+}
+
+.definition h4 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.definition p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+select {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#singers-container {
+  background-color: #c4c4c4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+
+.singer-card {
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.singer-card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tessitura {
+  font-size: 1.2em;
+  color: #ad8447;
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0096e6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0077b3;
+}
+
+#no-singer-message {
+  color: #a32e2e;
+  display: none;
+}
+/* Media Queries pour la responsivité */
+@media screen and (max-width: 768px) {
+  aside {
+    width: 100%;
+  }
+
+  #singers-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .singer-card {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .singer-card {
+    width: 100%;
+  }
+}
