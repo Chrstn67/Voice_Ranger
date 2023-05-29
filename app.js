@@ -415,15 +415,6 @@ const singers = [
     wikipediaLink: "https://fr.wikipedia.org/wiki/Nico_Santos",
   },
   {
-    name: "Moniqué",
-    country: "Pologne",
-    tessitura: "Soprano",
-    ambitus: "E3 - E6",
-    birthDate: "7 juillet 1995",
-    deathDate: "",
-    wikipediaLink: "https://fr.wikipedia.org/wiki/Monika_Kuszyńska",
-  },
-  {
     name: "Marina Kaye",
     country: "France",
     tessitura: "Soprano",
@@ -490,7 +481,7 @@ const singers = [
     name: "Dimash Kudaibergenov",
     country: "Kazakhstan",
     tessitura: "Ténor",
-    ambitus: "D2 - G5",
+    ambitus: "C2 - B♭1",
     birthDate: "24 mai 1994",
     deathDate: "",
     wikipediaLink: "https://fr.wikipedia.org/wiki/Dimash_Kudaibergen",
@@ -530,6 +521,78 @@ const singers = [
     birthDate: "26 novembre 1939",
     deathDate: "24 mai 2023",
     wikipediaLink: "https://fr.wikipedia.org/wiki/Tina_Turner",
+  },
+  {
+    name: "Bruno Mars",
+    country: "États-Unis",
+    tessitura: "Ténor",
+    ambitus: "C3 - G5",
+    birthDate: "8 octobre 1985",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Bruno_Mars",
+  },
+  {
+    name: "Charlie Puth",
+    country: "États-Unis",
+    tessitura: "Ténor",
+    ambitus: "A2 - G5",
+    birthDate: "2 décembre 1991",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Charlie_Puth",
+  },
+  {
+    name: "Tom Gregory",
+    country: "Royaume-Uni",
+    tessitura: "Ténor",
+    ambitus: "E2 - G♯4",
+    birthDate: "29 novembre 1994",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Tom_Gregory",
+  },
+  {
+    name: "George Michael",
+    country: "Royaume-Uni",
+    tessitura: "Ténor",
+    ambitus: "B♭2 - A5",
+    birthDate: "25 juin 1963",
+    deathDate: "25 décembre 2016",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/George_Michael",
+  },
+  {
+    name: "Harry Styles",
+    country: "Royaume-Uni",
+    tessitura: "Ténor",
+    ambitus: "C3 - C6",
+    birthDate: "1er février 1994",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Harry_Styles",
+  },
+  {
+    name: "Delta Goodrem",
+    country: "Australie",
+    tessitura: "Mezzo-soprano",
+    ambitus: "E♭3 - B♭5",
+    birthDate: "9 novembre 1984",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Delta_Goodrem",
+  },
+  {
+    name: "Guy Sebastian",
+    country: "Australie",
+    tessitura: "Ténor",
+    ambitus: "D3 - G5",
+    birthDate: "26 octobre 1981",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Guy_Sebastian",
+  },
+  {
+    name: "Monika Pundziūtė",
+    country: "Lituanie",
+    tessitura: "Mezzo-soprano",
+    ambitus: "E♭3 - E♭6",
+    birthDate: "5 mai 1997",
+    deathDate: "",
+    wikipediaLink: "https://fr.wikipedia.org/wiki/Monika_Pundziūtė",
   },
 ];
 
@@ -614,8 +677,12 @@ function filterSingers() {
       singerCard.classList.add("singer-card");
 
       const singerName = document.createElement("h2");
-      singerName.textContent = singer.name;
+      singerName.innerHTML = singer.name;
       singerCard.appendChild(singerName);
+
+      const singerCountry = document.createElement("p");
+      singerCountry.innerHTML = singer.country;
+      singerCard.appendChild(singerCountry);
 
       const singerInfo = document.createElement("p");
       singerInfo.innerHTML = `<span class="tessitura">${singer.tessitura}</span><br>

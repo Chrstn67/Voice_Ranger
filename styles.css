@@ -31,7 +31,7 @@ h1 {
 button {
   font-size: 1.2rem;
   color: #fff;
-  background-color: #444;
+  background-color: #855656;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -40,7 +40,7 @@ button {
 }
 
 button:hover {
-  background-color: #666;
+  background-color: #d35151;
 }
 
 aside {
@@ -135,6 +135,7 @@ select {
   width: calc(33.33% - 20px);
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
   padding: 20px;
   margin: 10px;
   transition: transform 0.3s ease;
@@ -142,6 +143,7 @@ select {
 
 .singer-card:hover {
   transform: translateY(-5px);
+  outline: rgb(0, 26, 255) 2px solid;
 }
 
 h2 {
